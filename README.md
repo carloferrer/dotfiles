@@ -26,8 +26,8 @@ PROJECT_SERVER_TEST='bundle exec rspec "$@"'
 UPDATE_ALL_PROJECTS='(cd ${PROJECT_CLIENT_DIR} && git checkout main && git pull && npm install && git checkout -) && (cd ${PROJECT_SERVER_DIR} && git checkout main && git pull && bundle install && bundle exec rake db:migrate && git checkout -)'
 ```
 
-#### 3. Reference aliases at `~/.zshrc`
+#### 3. Import setup at `~/.zshrc`
 At `~/.zshrc`, add this:
 ```
-source "~/.dotfiles/aliases.zsh"
+source "~/.dotfiles/setup.zsh"
 ```
