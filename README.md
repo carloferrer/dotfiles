@@ -25,17 +25,10 @@ PROJECT_SERVER_TEST='bundle exec rspec "$@"'
 UPDATE_ALL_PROJECTS='(cd ${PROJECT_CLIENT_DIR} && git checkout main && git pull && npm install && git checkout -) && (cd ${PROJECT_SERVER_DIR} && git checkout main && git pull && bundle install && bundle exec rake db:migrate && git checkout -)'
 ```
 
-#### 3. Import setup at `~/.zshrc`
-Add this to `~/.zshrc`:
+#### 3. Run install script
 ```
-source "~/.dotfiles/setup.zsh"
-```
+# Source setup.zsh from ~/.zshrc
+# Symlink configs under symlinks/
 
-#### 4. Symlink configs
-```
-# kitty (terminal emulator)
-ln -s ~/.dotfiles/symlinks/kitty/* ~/.config/kitty
-
-# karabiner-elements
-ln -s ~/.dotfiles/symlinks/karabiner/* ~/.config/karabiner
+bash install.sh
 ```
