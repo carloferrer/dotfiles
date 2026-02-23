@@ -12,10 +12,13 @@ git clone git@github.com:carloferrer/dotfiles.git ~/.dotfiles
 ```
 # Generate aliases/private.zsh
 # Source setup.zsh from ~/.zshrc
-# Symlink configs under symlinks/
+# Symlink the symlinks/
 
 bash install.sh
 ```
 
-#### 3. Refine `./aliases/private.zsh` to be useful
+#### 3. Refine `aliases/private.zsh` to be useful
 This file's meant for stuff specific to production projects, so it's purposely untracked.
+
+### TBDs
+`tbds/*` need manual work to symlink or get functional; `install.sh` may handle this one day 🤞

@@ -55,7 +55,7 @@ for app in "${SYMLINK_APPS[@]}"; do
       fi
     done
   else
-    echo "~/.config/$app not found, skipping $app symlinks"
+    echo "  🤔 ~/.config/$app not found, skipping $app symlinks"
   fi
 done
 
