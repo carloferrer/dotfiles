@@ -32,8 +32,8 @@ run_local() {
 alias t=test_local
 
 test_local() {
-  if [ "$PWD" = "${PROJECT_CLIENT_DIR}" ]; then
-    eval ${PROJECT_CLIENT_TEST}
+  if [[ "$1" == client/* ]]; then
+    eval ${PROJECT_CLIENT_TEST} "$@"
   elif [ "$PWD" = "${PROJECT_SERVER_DIR}" ]; then
     eval ${PROJECT_SERVER_TEST}
   else
