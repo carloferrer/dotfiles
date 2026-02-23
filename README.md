@@ -1,6 +1,6 @@
 # dotfiles
 
-Probs not the best dotfiles setup, but it gets the job done.
+Probs not the best dotfiles setup, but it's mine, and gets the job done.
 
 ### Setting Up
 
@@ -30,4 +30,10 @@ UPDATE_ALL_PROJECTS='(cd ${PROJECT_CLIENT_DIR} && git checkout main && git pull 
 At `~/.zshrc`, add this:
 ```
 source "~/.dotfiles/setup.zsh"
+```
+
+#### 4. Symlink kitty config
+Assuming the "kitty" terminal emulator is installed, do this:
+```
+ln -s ~/.dotfiles/kitty/* ~/.config/kitty
 ```
