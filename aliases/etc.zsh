@@ -33,9 +33,9 @@ alias t=test_local
 
 test_local() {
   if [[ "$1" == client/* ]]; then
-    eval ${PROJECT_CLIENT_TEST} "$@"
-  elif [ "$PWD" = "${PROJECT_SERVER_DIR}" ]; then
-    eval ${PROJECT_SERVER_TEST}
+    (cd ${PROJECT_CLIENT_DIR} && eval ${PROJECT_CLIENT_TEST} "$@")
+  elif [[ "$1" == ${PROJECT_SERVER_DIR}/* ]]; then
+    (cd ${PROJECT_SERVER_DIR} && eval ${PROJECT_SERVER_TEST} "$@")
   else
     echo "directory unrecognized"
   fi
